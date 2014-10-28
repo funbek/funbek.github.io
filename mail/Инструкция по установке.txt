@@ -1,0 +1,59 @@
+Инструкция по установке почтовой формы
+
+
+1. Все картинки из папки images, скопируйте в свою папку images
+
+2.Файлы - comm.js, comment.php, JsHttpRequest.js, JsHttpRequest.php
+закачайте на сервер в корневую папку своего сайта
+
+
+3. Откройте блокнотом файл style.css, скопируйте все его содержимое и
+вставте в свой файл style.css
+
+4.Откройте в программе Notepad файл comment.php и в строке 118
+укажите ваш email
+
+$emailadmin = 'admin@admin.com';//e-mail админа
+
+5.Подключите скрипты к странице на которой будет расположена
+почтовая форма. Между тегами <head> и </head>
+
+<script type="text/javascript" src='comm.js'></script>
+<script type="text/javascript" src='JsHttpRequest.js'></script>
+
+6.В место где должна быть форма вставте следующий код:
+
+
+
+<center>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+<TD><IMG SRC="images/ttop.jpg"></TD>
+	</TR>
+
+	<TR>
+<TD class=tcenter WIDTH=533 HEIGHT=100% background="images/tcenter.jpg" align=center>
+<div align='center' id='cerror'></div>
+
+<form method="POST" action="#" enctype="multipart/form-data" name="addcom" id="addcom" onSubmit="return false">
+<p>Ваше имя:</p>
+<p><input type="text" name="name" class="inputtext" id="name" onblur="this.className='inputtext'" onfocus="this.className='inputtextact'"
+></p>
+<p>Ваш email:</p>
+<p><input type="text" name="email" class="inputtext" id="email" onblur="this.className='inputtext'" onfocus="this.className='inputtextact'"
+></p>
+<p>Ваше послание:</p>
+<p><textarea class="comarea" name='comtext' cols='50' rows='5'onblur="this.className='comarea'" onfocus="this.className='comareaact'"></textarea>
+</p>
+<p><input class="formbutton"  name="button" type="button" value="Отправить"  onclick="doLoad(document.getElementById('addcom'))"></p>
+</form>
+
+</TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="images/tbot.jpg" WIDTH=533 HEIGHT=35></TD>
+</TR>
+</TABLE>
+</center>
+

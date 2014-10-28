@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>Отправка почты со страниц сайта</TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
+
+<LINK href="style.css" TYPE="text/css" rel="stylesheet">
+
+<script type="text/javascript" src='comm.js'></script>
+<script type="text/javascript" src='JsHttpRequest.js'></script>
+
+</HEAD>
+
+
+<BODY>
+ 
+<center>
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+<TD><IMG SRC="images/ttop.jpg"></TD>
+	</TR>
+
+	<TR>
+<TD class=tcenter WIDTH=533 HEIGHT=100% background="images/tcenter.jpg" align=center>
+<div align='center' id='cerror'></div>
+
+<form method="POST" action="#" enctype="multipart/form-data" name="addcom" id="addcom" onSubmit="return false">
+<p>Ваше имя:</p>
+<p><input type="text" name="name" class="inputtext" id="name" onblur="this.className='inputtext'" onfocus="this.className='inputtextact'"
+></p>
+<p>Ваш email:</p>
+<p><input type="text" name="email" class="inputtext" id="email" onblur="this.className='inputtext'" onfocus="this.className='inputtextact'"
+></p>
+<p>Ваше послание:</p>
+<p><textarea class="comarea" name='comtext' cols='50' rows='5'onblur="this.className='comarea'" onfocus="this.className='comareaact'"></textarea>
+</p>
+<p><input class="formbutton"  name="button" type="button" value="Отправить"  onclick="doLoad(document.getElementById('addcom'))"></p>
+</form>
+
+</TD>
+</TR>
+
+<TR>
+<TD><IMG SRC="images/tbot.jpg" WIDTH=533 HEIGHT=35></TD>
+</TR>
+</TABLE>
+</center>
+
+
+
+</BODY>
+</html>
+
